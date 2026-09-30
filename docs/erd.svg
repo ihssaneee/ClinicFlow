@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 700" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1180" height="700" fill="#f7f6f3"/>
+  <text x="40" y="36" font-size="20" font-weight="700" fill="#1c1917">ClinicFlow - ERD</text>
+  <text x="40" y="58" font-size="13" fill="#57534e">PostgreSQL. Barre = un, cercle = optionnel, fourche = plusieurs.</text>
+
+  <line x1="180" y1="300" x2="180" y2="348" stroke="#44403c" stroke-width="1.6"/>
+  <line x1="174" y1="300" x2="186" y2="300" stroke="#44403c" stroke-width="1.6"/>
+  <line x1="174" y1="306" x2="186" y2="306" stroke="#44403c" stroke-width="1.6"/>
+  <line x1="168" y1="348" x2="192" y2="348" stroke="#44403c" stroke-width="1.6"/>
+  <polyline points="180,364 168,348 180,356 192,348" fill="none" stroke="#44403c" stroke-width="1.6"/>
+  <text x="196" y="334" font-size="12" fill="#44403c">created_by</text>
+  <text x="148" y="328" font-size="11" fill="#78716c">1</text>
+  <text x="148" y="360" font-size="11" fill="#78716c">N</text>
+
+  <line x1="376" y1="470" x2="612" y2="470" stroke="#44403c" stroke-width="1.6"/>
+  <line x1="360" y1="464" x2="360" y2="476" stroke="#44403c" stroke-width="1.6"/>
+  <polyline points="376,470 360,458 368,470 360,482" fill="none" stroke="#44403c" stroke-width="1.6"/>
+  <line x1="612" y1="464" x2="612" y2="476" stroke="#44403c" stroke-width="1.6"/>
+  <line x1="618" y1="464" x2="618" y2="476" stroke="#44403c" stroke-width="1.6"/>
+  <text x="450" y="458" font-size="12" fill="#44403c">patient_id</text>
+  <text x="384" y="492" font-size="11" fill="#78716c">N</text>
+  <text x="590" y="492" font-size="11" fill="#78716c">1</text>
+
+  <line x1="328" y1="168" x2="828" y2="168" stroke="#44403c" stroke-width="1.6"/>
+  <line x1="320" y1="162" x2="320" y2="174" stroke="#44403c" stroke-width="1.6"/>
+  <line x1="326" y1="162" x2="326" y2="174" stroke="#44403c" stroke-width="1.6"/>
+  <circle cx="836" cy="168" r="5" fill="#f7f6f3" stroke="#44403c" stroke-width="1.6"/>
+  <line x1="848" y1="162" x2="848" y2="174" stroke="#44403c" stroke-width="1.6"/>
+  <polyline points="864,168 848,156 856,168 848,180" fill="none" stroke="#44403c" stroke-width="1.6"/>
+  <text x="548" y="156" font-size="12" fill="#44403c">user_id</text>
+  <text x="336" y="190" font-size="11" fill="#78716c">1</text>
+  <text x="872" y="190" font-size="11" fill="#78716c">0..N</text>
+
+  <g>
+    <rect x="40" y="78" width="280" height="214" rx="6" fill="#ffffff" stroke="#d6d3d1"/>
+    <rect x="40" y="78" width="280" height="32" rx="6" fill="#0f766e"/>
+    <rect x="40" y="98" width="280" height="12" fill="#0f766e"/>
+    <text x="56" y="100" font-size="14" font-weight="700" fill="#ffffff">users</text>
+    <text x="56" y="132" font-size="13" fill="#1c1917">id</text><text x="250" y="132" font-size="11" fill="#0f766e">PK</text>
+    <text x="56" y="154" font-size="13" fill="#1c1917">full_name</text>
+    <text x="56" y="176" font-size="13" fill="#1c1917">email</text><text x="248" y="176" font-size="11" fill="#0f766e">UK</text>
+    <text x="56" y="198" font-size="13" fill="#1c1917">password_hash</text>
+    <text x="56" y="220" font-size="13" fill="#1c1917">role</text>
+    <text x="56" y="242" font-size="13" fill="#1c1917">created_at</text>
+    <text x="56" y="264" font-size="13" fill="#1c1917">updated_at</text>
+    <text x="56" y="278" font-size="13" fill="#78716c">deleted_at</text>
+  </g>
+
+  <g>
+    <rect x="40" y="364" width="320" height="258" rx="6" fill="#ffffff" stroke="#d6d3d1"/>
+    <rect x="40" y="364" width="320" height="32" rx="6" fill="#0f766e"/>
+    <rect x="40" y="384" width="320" height="12" fill="#0f766e"/>
+    <text x="56" y="386" font-size="14" font-weight="700" fill="#ffffff">appointments</text>
+    <text x="56" y="418" font-size="13" fill="#1c1917">id</text><text x="292" y="418" font-size="11" fill="#0f766e">PK</text>
+    <text x="56" y="440" font-size="13" fill="#1c1917">patient_id</text><text x="292" y="440" font-size="11" fill="#0f766e">FK</text>
+    <text x="56" y="462" font-size="13" fill="#1c1917">appointment_date</text>
+    <text x="56" y="484" font-size="13" fill="#1c1917">status</text>
+    <text x="56" y="506" font-size="13" fill="#1c1917">reason</text>
+    <text x="56" y="528" font-size="13" fill="#78716c">notes</text>
+    <text x="56" y="550" font-size="13" fill="#1c1917">created_by</text><text x="292" y="550" font-size="11" fill="#0f766e">FK</text>
+    <text x="56" y="572" font-size="13" fill="#1c1917">created_at</text>
+    <text x="56" y="594" font-size="13" fill="#1c1917">updated_at</text>
+    <text x="56" y="608" font-size="13" fill="#78716c">deleted_at</text>
+  </g>
+
+  <g>
+    <rect x="630" y="364" width="280" height="236" rx="6" fill="#ffffff" stroke="#d6d3d1"/>
+    <rect x="630" y="364" width="280" height="32" rx="6" fill="#0f766e"/>
+    <rect x="630" y="384" width="280" height="12" fill="#0f766e"/>
+    <text x="646" y="386" font-size="14" font-weight="700" fill="#ffffff">patients</text>
+    <text x="646" y="418" font-size="13" fill="#1c1917">id</text><text x="842" y="418" font-size="11" fill="#0f766e">PK</text>
+    <text x="646" y="440" font-size="13" fill="#1c1917">full_name</text>
+    <text x="646" y="462" font-size="13" fill="#1c1917">cin</text><text x="840" y="462" font-size="11" fill="#0f766e">UK</text>
+    <text x="646" y="484" font-size="13" fill="#1c1917">phone</text>
+    <text x="646" y="506" font-size="13" fill="#1c1917">birth_date</text>
+    <text x="646" y="528" font-size="13" fill="#78716c">address</text>
+    <text x="646" y="550" font-size="13" fill="#1c1917">created_at</text>
+    <text x="646" y="572" font-size="13" fill="#1c1917">updated_at</text>
+    <text x="646" y="586" font-size="13" fill="#78716c">deleted_at</text>
+  </g>
+
+  <g>
+    <rect x="860" y="78" width="280" height="192" rx="6" fill="#ffffff" stroke="#d6d3d1"/>
+    <rect x="860" y="78" width="280" height="32" rx="6" fill="#0f766e"/>
+    <rect x="860" y="98" width="280" height="12" fill="#0f766e"/>
+    <text x="876" y="100" font-size="14" font-weight="700" fill="#ffffff">audit_logs</text>
+    <text x="876" y="132" font-size="13" fill="#1c1917">id</text><text x="1072" y="132" font-size="11" fill="#0f766e">PK</text>
+    <text x="876" y="154" font-size="13" fill="#78716c">user_id</text><text x="1072" y="154" font-size="11" fill="#0f766e">FK</text>
+    <text x="876" y="176" font-size="13" fill="#1c1917">entity_type</text>
+    <text x="876" y="198" font-size="13" fill="#1c1917">entity_id</text>
+    <text x="876" y="220" font-size="13" fill="#1c1917">action</text>
+    <text x="876" y="242" font-size="13" fill="#1c1917">changes</text>
+    <text x="876" y="256" font-size="13" fill="#1c1917">created_at</text>
+  </g>
+
+  <text x="40" y="668" font-size="12" fill="#57534e">PK cle primaire, FK cle etrangere, UK unique. Colonnes grises : facultatives. entity_id n'est pas une cle etrangere.</text>
+  <text x="40" y="688" font-size="12" fill="#57534e">dashboard_stats est une vue, pas une table.</text>
+</svg>
