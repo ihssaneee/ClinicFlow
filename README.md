@@ -114,11 +114,14 @@ docker compose down -v
 npm run dev
 npm run build
 npm start
+npm test
 npm run migrate:up
 npm run migrate:down
 ```
 
 `npm run dev` compile TypeScript puis relance `dist/server.js` à chaque changement. `npm start` lance la build déjà compilée, sans migration.
+
+`npm test` compile les tests avec le TypeScript du projet, puis les exécute avec Jest. Ce sont des tests d’intégration (Supertest) contre l’API et la base indiquée par `DATABASE_URL` dans `backend/.env`. Les migrations doivent déjà être appliquées. Les tests créent leurs propres utilisateurs et patients, puis suppriment ces lignes à la fin. Ils couvrent la connexion (succès et échec), le middleware d’authentification, la suppression d’un patient réservée à l’admin, le refus d’un CIN en double, et le refus d’un rendez-vous confirmé à moins de 30 minutes d’un autre rendez-vous confirmé du même patient.
 
 ### Frontend
 
